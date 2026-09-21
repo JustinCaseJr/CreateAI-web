@@ -1,0 +1,28 @@
+name = "create-ai-web"
+main = "worker.js"
+compatibility_date = "2026-09-20"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "."
+binding = "ASSETS"
+
+[ai]
+binding = "AI"
+
+[[durable_objects.bindings]]
+name = "CREATE_AI_AGENT"
+class_name = "CreateAIAgent"
+
+[exports.CreateAIAgent]
+type = "durable-object"
+storage = "sqlite"
+
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "create-ai-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+migrations_dir = "migrations"
