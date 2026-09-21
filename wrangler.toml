@@ -1,3 +1,4 @@
+npm install agents
 name = "create-ai-web"
 main = "worker.js"
 compatibility_date = "2026-09-20"
